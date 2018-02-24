@@ -1,0 +1,28 @@
+{
+  "name": "golite",
+  "version": "1.0.0",
+  "description": "a simple go client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/travhimself/golite.git"
+  },
+  "author": "Travis Sisti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/travhimself/golite/issues"
+  },
+  "homepage": "https://github.com/travhimself/golite#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.0",
+    "gulp-watch": "^5.0.0",
+    "less": "^3.0.1",
+    "socket.io": "^2.0.4"
+  }
+}

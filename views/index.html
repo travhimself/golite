@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Go Lite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+	
+    <script src="/js/ui.js" type="text/javascript" defer></script>
+
+    <script type='text/javascript'>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'INSERTGAIDHERE']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+
+	<header></header>
+
+    <main>
+		<section id="boardcontainer">
+			<svg id="board"></svg>
+		</section>
+		<section id="detail">
+            Details
+        </section>
+	</main>
+	
+	<footer></footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>var socket = io();</script>
+
+</body>
+
+</html>
