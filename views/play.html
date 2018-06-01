@@ -10,10 +10,10 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
 	
-    <script src="/js/ui.js" type="text/javascript" defer></script>
+    <script src="/js/play.js" type="text/javascript" defer></script>
 
     <script type='text/javascript'>
         var _gaq = _gaq || [];
@@ -33,12 +33,21 @@
 
 	<header></header>
 
-    <main>
+    <main id="play">
 		<section id="boardcontainer">
 			<svg id="board"></svg>
 		</section>
 		<section id="detail">
-            Details
+            Invite Opponent
+            <input type="text" value="whatever">
+
+            <div>White Captures</div>
+
+            <div>Black Captures</div>
+
+            <button>Pass</button>
+
+            <button>Resign</button>
         </section>
 	</main>
 	

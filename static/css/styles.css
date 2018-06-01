@@ -1,44 +1,177 @@
+html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 main {
   display: flex;
-  margin: 50px;
+  height: 100%;
 }
-main section#boardcontainer {
+main section {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+h1 {
+  font-size: 60px;
+  margin: 0 0 40px 0;
+}
+h2 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+}
+h3 {
+  font-size: 36px;
+  margin: 0 0 20px 0;
+}
+h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+button {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 70px;
+  padding: 20px 40px;
+  border-radius: 1px;
+  border: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px #00000044;
+  transition: transform .1s;
+}
+button:hover {
+  transform: scale(1.02);
+}
+main#start section {
+  display: flex;
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 100px;
+}
+main#start section#new {
+  flex-basis: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f1f2f6;
+}
+main#start section#new h1 {
+  color: #2f3542;
+}
+main#start section#new h1 span {
+  color: #7ed6df;
+}
+main#start section#new h4 {
+  color: #747d8c;
+}
+main#start section#new button {
+  color: #fff;
+  background: #2f3542;
+  margin-top: 40px;
+}
+main#start section#join {
+  position: relative;
+  z-index: 1;
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 0;
+  overflow: hidden;
+  color: #fff;
+  background-image: url(/img/forest-halftone.jpg);
+  background-size: cover;
+}
+main#start section#join:before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background: linear-gradient(to bottom right, rgba(47, 53, 66, 0.95), rgba(164, 176, 190, 0.8));
+  opacity: .9;
+}
+main#start section#join button {
+  color: #2f3542;
+  background: #fff;
+  border-left: 5px solid #7ed6df;
+}
+main#start section#join #enter {
+  display: flex;
+  flex-shrink: 0;
+  margin-bottom: 50px;
+}
+main#start section#join #enter button {
+  margin-right: 50px;
+}
+main#start section#join #livegames {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+main#start section#join #livegames div {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+  border-radius: 1px;
+  background: #f1f2f6;
+  box-shadow: 0px 5px 10px #00000044;
+  opacity: .9;
+}
+main#start section#join #photocredit {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 10px;
+}
+main#start section#join #photocredit a {
+  color: #fff;
+}
+main#play section#boardcontainer {
   background: #dadada;
 }
-main section#boardcontainer svg#board line.line {
+main#play section#boardcontainer svg#board line.line {
   stroke: #888;
 }
-main section#boardcontainer svg#board circle.star {
+main#play section#boardcontainer svg#board circle.star {
   fill: #888;
 }
-main section#boardcontainer svg#board text.notation {
+main#play section#boardcontainer svg#board text.notation {
   fill: #ccc;
 }
-main section#boardcontainer svg#board circle.point {
+main#play section#boardcontainer svg#board circle.point {
   opacity: 0;
 }
-main section#boardcontainer svg#board circle.point[data-owner='b'] {
+main#play section#boardcontainer svg#board circle.point[data-owner='b'] {
   opacity: 1;
   fill: #000;
+  stroke: #000;
 }
-main section#boardcontainer svg#board circle.point[data-owner='w'] {
+main#play section#boardcontainer svg#board circle.point[data-owner='w'] {
   opacity: 1;
   fill: #fff;
+  stroke: #fff;
 }
-main section#boardcontainer svg#board circle.point:hover:not([data-owner='b']):not([data-owner='w']) {
+main#play section#boardcontainer svg#board circle.point:hover:not([data-owner='b']):not([data-owner='w']) {
   opacity: .4;
   fill: #bada55;
 }
-main section#boardcontainer.playerstoneswhite svg#board {
+main#play section#boardcontainer.playerstoneswhite svg#board {
   transform: rotate(180deg);
 }
-main section#detail {
-  width: 200px;
-  margin-left: 100px;
+main#play section#detail {
+  margin: 50px;
 }
-/* orientation switch for white stones */

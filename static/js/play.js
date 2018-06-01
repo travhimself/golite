@@ -49,7 +49,7 @@ const linewidth = 1;
 const starsize = 3;
 const notationoffset = 30;
 const pointsize = 12;
-const fontfamily = 'Lato';
+const fontfamily = 'Nunito Sans';
 
 
 

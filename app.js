@@ -29,8 +29,12 @@ app.use(express.static('static'));
 
 
 // routes + middleware to catch 404s
-app.get('/*', function (req, res) {
-    res.sendFile('index.html', fileoptions);
+app.get('/', function (req, res) {
+    res.sendFile('start.html', fileoptions);
+});
+
+app.get('/play/*', function (req, res) {
+    res.sendFile('play.html', fileoptions);
 });
 
 app.use(function(req, res) {
